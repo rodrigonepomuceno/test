@@ -18,7 +18,7 @@ class EmojisListPage extends GetView<EmojisListController> {
               ? Center(
                   child: Text(
                     'Emoji list is empty',
-                    style: AppTextStyle.exampleStyle(color: AppColors.blue),
+                    style: AppTextStyle.h2(color: AppColors.blue),
                   ),
                 )
               : EmojisGridViewWidget(controller: controller),

@@ -8,8 +8,6 @@ class AppListTile extends StatelessWidget {
   final Color backgroundColor;
   final double height;
   final double horizontalPadding;
-  final double botDividerHeight;
-  final Color botDividerCollor;
 
   const AppListTile({
     Key key,
@@ -18,8 +16,6 @@ class AppListTile extends StatelessWidget {
     this.backgroundColor,
     this.height,
     this.horizontalPadding,
-    this.botDividerHeight = 1,
-    this.botDividerCollor = AppColors.gray1,
   }) : super(key: key);
 
   @override

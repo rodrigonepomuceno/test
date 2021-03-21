@@ -11,7 +11,7 @@ class ErrorLoadWidget extends StatelessWidget {
         child: Text(
           'Something went wrong in the query with the API.',
           textAlign: TextAlign.center,
-          style: AppTextStyle.exampleStyle(color: AppColors.blue),
+          style: AppTextStyle.h2(color: AppColors.blue),
         ),
       ),
     );

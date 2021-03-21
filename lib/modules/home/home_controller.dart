@@ -41,11 +41,11 @@ class HomeController extends GetxController {
 
   getEmojisApi() async {
     try {
+      inserting.value = !inserting.value;
       bool hasData = await getLocalEmoji();
       if (!hasData) {
         var response = await repository.getEmojis();
         if (response != null) {
-          inserting.value = !inserting.value;
           emojis.addAll(response);
 
           for (var item in emojis) {
@@ -57,18 +57,21 @@ class HomeController extends GetxController {
             message: 'Inserted ${emojis.length} records in the database.',
           );
         } else {
+          inserting.value = !inserting.value;
           setSnackbar(
             title: 'Insert Emojis',
             message: 'Error load API',
           );
         }
       } else {
+        inserting.value = !inserting.value;
         setSnackbar(
           title: 'Data already included.',
           message: 'The data is already in the database.',
         );
       }
     } catch (e) {
+      inserting.value = !inserting.value;
       print(e.toString());
     }
   }

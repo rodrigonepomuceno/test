@@ -20,14 +20,14 @@ class ItemDetailWidget extends StatelessWidget {
       height: 90.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(
-          Radius.circular(4),
+          Radius.circular(10.sp),
         ),
         border: Border.all(
-          color: Colors.black,
-          width: 1.w,
+          color: AppColors.blue,
+          width: 2.w,
         ),
       ),
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.all(10.sp),
       child: Column(
         children: [
           AppSizedBox.height_6,

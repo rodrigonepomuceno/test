@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class AppTextStyle {
   AppTextStyle._();
 
-  static TextStyle exampleStyle(
+  static TextStyle h2(
           {Color color, FontWeight fontWeight, TextDecoration decoration}) =>
       TextStyle(
         fontSize: 25.sp,

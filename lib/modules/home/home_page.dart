@@ -9,7 +9,7 @@ class HomePage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.gray1,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
         title: Text('Home'),
       ),

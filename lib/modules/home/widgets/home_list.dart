@@ -25,12 +25,11 @@ class HomeDetailsPage extends StatelessWidget {
           Container(
             margin: EdgeInsets.symmetric(horizontal: 130),
             height: 100.h,
-            child: controller.urlEmoji.value.isEmpty
-                ? Image.asset('assets/notfound.png')
-                : AppContainerImage(url: controller.urlEmoji.value),
+            child: AppContainerImage(url: controller.urlEmoji.value),
           ),
           AppSizedBox.height_24,
           AppFlatButton(
+            loading: controller.inserting.value,
             active: true,
             onPressed: controller.getEmojisApi,
             lable: 'Get Emojis API',
@@ -38,7 +37,7 @@ class HomeDetailsPage extends StatelessWidget {
             strech: false,
             textStyle:
                 TextStyle(color: AppColors.white, fontWeight: FontWeight.bold),
-            margin: EdgeInsets.symmetric(horizontal: 70),
+            margin: EdgeInsets.symmetric(horizontal: 50.w),
           ),
           AppSizedBox.height_8,
           AppFlatButton(
@@ -49,7 +48,7 @@ class HomeDetailsPage extends StatelessWidget {
             strech: false,
             textStyle:
                 TextStyle(color: AppColors.white, fontWeight: FontWeight.bold),
-            margin: EdgeInsets.symmetric(horizontal: 70),
+            margin: EdgeInsets.symmetric(horizontal: 50.w),
           ),
           AppSizedBox.height_8,
           AppFlatButton(
@@ -60,11 +59,11 @@ class HomeDetailsPage extends StatelessWidget {
             strech: false,
             textStyle:
                 TextStyle(color: AppColors.white, fontWeight: FontWeight.bold),
-            margin: EdgeInsets.symmetric(horizontal: 70),
+            margin: EdgeInsets.symmetric(horizontal: 50.w),
           ),
           AppSizedBox.height_8,
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 70),
+            padding: EdgeInsets.symmetric(horizontal: 50.w),
             child: AppListTile(
               body: AppTextFormField(
                 controller: controller.textEditingController,
@@ -86,7 +85,7 @@ class HomeDetailsPage extends StatelessWidget {
             strech: false,
             textStyle:
                 TextStyle(color: AppColors.white, fontWeight: FontWeight.bold),
-            margin: EdgeInsets.symmetric(horizontal: 70),
+            margin: EdgeInsets.symmetric(horizontal: 50.w),
           ),
           AppSizedBox.height_8,
           AppFlatButton(
@@ -97,7 +96,7 @@ class HomeDetailsPage extends StatelessWidget {
             strech: false,
             textStyle:
                 TextStyle(color: AppColors.white, fontWeight: FontWeight.bold),
-            margin: EdgeInsets.symmetric(horizontal: 70),
+            margin: EdgeInsets.symmetric(horizontal: 50.w),
           )
         ],
       ),

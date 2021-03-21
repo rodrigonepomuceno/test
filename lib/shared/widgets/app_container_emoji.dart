@@ -1,3 +1,4 @@
+import 'package:challenge/shared/themes/app_colors.dart';
 import 'package:challenge/shared/widgets/app_emoji_network.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,14 +16,13 @@ class AppContainerImage extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(
-          Radius.circular(4),
+          Radius.circular(10.sp),
         ),
         border: Border.all(
-          color: Colors.black,
-          width: 1.w,
+          color: AppColors.blue,
+          width: 2.w,
         ),
       ),
-      margin: EdgeInsets.all(10),
       child: AppEmojiNetwork(url: url),
     );
   }

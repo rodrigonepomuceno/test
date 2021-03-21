@@ -1,9 +1,10 @@
 import 'package:challenge/modules/avatars_list/avatars_list_controller.dart';
 import 'package:challenge/shared/widgets/app_container_emoji.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class GridViewPage extends StatelessWidget {
-  const GridViewPage({
+class AvatarGridViewWidget extends StatelessWidget {
+  const AvatarGridViewWidget({
     @required this.controller,
   });
 
@@ -19,8 +20,11 @@ class GridViewPage extends StatelessWidget {
           return InkWell(
             onTap: () =>
                 controller.removeAvatar(avatar: controller.avatars[index]),
-            child: AppContainerImage(
-              url: controller.avatars[index].avatar_url,
+            child: Padding(
+              padding: EdgeInsets.all(5.sp),
+              child: AppContainerImage(
+                url: controller.avatars[index].avatar_url,
+              ),
             ),
           );
         },

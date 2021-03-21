@@ -1,5 +1,5 @@
 import 'package:challenge/modules/avatars_list/avatars_list_controller.dart';
-import 'package:challenge/modules/avatars_list/widgets/grid_view_widget.dart';
+import 'package:challenge/modules/avatars_list/widgets/avatar_grid_view_widget.dart';
 import 'package:challenge/shared/themes/app_colors.dart';
 import 'package:challenge/shared/themes/app_text_style.dart';
 import 'package:flutter/material.dart';
@@ -18,10 +18,10 @@ class AvatarsListPage extends GetView<AvatarsListController> {
               ? Center(
                   child: Text(
                     'Avatar list is empty',
-                    style: AppTextStyle.exampleStyle(color: AppColors.blue),
+                    style: AppTextStyle.h2(color: AppColors.blue),
                   ),
                 )
-              : GridViewPage(controller: controller),
+              : AvatarGridViewWidget(controller: controller),
           onRefresh: controller.refreshList,
         ),
       ),
